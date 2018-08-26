@@ -1,0 +1,77 @@
+#=============================================================================
+# dark_powered.toml --- dark powered configuration example for SpaceVim
+# Copyright (c) 2016-2017 Wang Shidong & Contributors
+# Author: Wang Shidong < wsdjeg at 163.com >
+# URL: https://spacevim.org
+# License: GPLv3
+#=============================================================================
+
+# All SpaceVim option below [option] section
+[options]
+    # set spacevim theme. by default colorscheme layer is not loaded,
+    # if you want to use more colorscheme, please load the colorscheme
+    # layer
+    colorscheme = "gruvbox"
+    background = "dark"
+    # Disable guicolors in basic mode, many terminal do not support 24bit
+    # true colors
+    enable_guicolors = true
+    # Disable statusline separator, if you want to use other value, please
+    # install nerd fonts
+    statusline_separator = "arrow"
+    statusline_inactive_separator = "arrow"
+    default_indent = 2
+    buffer_index_type = 4
+    enable_neomake = true
+    enable_ale = false
+    enable_tabline_filetype_icon = true
+    enable_statusline_display_mode = true
+#   enable_vimfiler_gitstatus = true
+    enable_vimfiler_filetypeicon = true
+		filemanager = "nerdtree"
+#    lint_on_the_fly = true
+    github_username = 'fivenp'
+    search_tools = ["pt", "ag", "rg", "ack", "grep"]
+    disabled_plugins = ["vim-jsx","vim-sensible"]
+    bootstrap_before = "myspacevim#before"
+    bootstrap_after = "myspacevim#after"
+# Enable autocomplete layer
+#[[layers]]
+#name = 'autocomplete'
+#auto-completion-return-key-behavior = "complete"
+#auto-completion-tab-key-behavior = "smart"
+
+[[layers]]
+name = 'shell'
+default_position = 'bottom'
+default_height = 20
+
+#[[layers]]
+#  name = "lang#javascript"
+[[layers]]
+  name = "lang#typescript"
+[[layers]]
+  name = "lang#php"
+[[layers]]
+  name = "lang#markdown"
+[[layers]]
+  name = "github"
+[[layers]]
+  name = "git"
+[[layers]]
+  name = "ctrlp"
+[[layers]]
+  name = "VersionControl"
+[[layers]]
+  name = "checkers"
+
+[[custom_plugins]]
+  name = "ryanoasis/vim-devicons"
+  name = "tiagofumo/vim-nerdtree-syntax-highlight"
+  name = "cj/vim-webdevicons"
+  name = "jelera/vim-javascript-syntax"
+  #name = "mxw/vim-jsx"
+  #name = "leafgarland/typescript-vim"
+  name = "maxmellon/vim-jsx-pretty"
+  name = "jreybert/vimagit"
+# name = "tpope/vim-sensible"
