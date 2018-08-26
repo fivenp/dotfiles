@@ -13,6 +13,8 @@
     # layer
     colorscheme = "gruvbox"
     background = "dark"
+    colorscheme_bg = "dark"
+    t_Co = 256
     # Disable guicolors in basic mode, many terminal do not support 24bit
     # true colors
     enable_guicolors = true
@@ -20,34 +22,30 @@
     # install nerd fonts
     statusline_separator = "arrow"
     statusline_inactive_separator = "arrow"
-    default_indent = 2
     buffer_index_type = 4
-    enable_neomake = true
-    enable_ale = false
     enable_tabline_filetype_icon = true
     enable_statusline_display_mode = true
-#   enable_vimfiler_gitstatus = true
-    enable_vimfiler_filetypeicon = true
-		filemanager = "nerdtree"
-#    lint_on_the_fly = true
+    enable_vimfiler_gitstatus = true
     github_username = 'fivenp'
     search_tools = ["pt", "ag", "rg", "ack", "grep"]
     disabled_plugins = ["vim-jsx","vim-sensible"]
-    bootstrap_before = "myspacevim#before"
-    bootstrap_after = "myspacevim#after"
+    lint_on_the_fly = true
+
 # Enable autocomplete layer
-#[[layers]]
-#name = 'autocomplete'
-#auto-completion-return-key-behavior = "complete"
-#auto-completion-tab-key-behavior = "smart"
+[[layers]]
+name = 'autocomplete'
+auto-completion-return-key-behavior = "complete"
+auto-completion-tab-key-behavior = "smart"
 
 [[layers]]
 name = 'shell'
 default_position = 'bottom'
 default_height = 20
 
-#[[layers]]
-#  name = "lang#javascript"
+[[layers]]
+  name = "ui"
+[[layers]]
+  name = "lang#javascript"
 [[layers]]
   name = "lang#typescript"
 [[layers]]
@@ -67,11 +65,7 @@ default_height = 20
 
 [[custom_plugins]]
   name = "ryanoasis/vim-devicons"
-  name = "tiagofumo/vim-nerdtree-syntax-highlight"
-  name = "cj/vim-webdevicons"
   name = "jelera/vim-javascript-syntax"
-  #name = "mxw/vim-jsx"
-  #name = "leafgarland/typescript-vim"
   name = "maxmellon/vim-jsx-pretty"
   name = "jreybert/vimagit"
-# name = "tpope/vim-sensible"
+#name = "tpope/vim-sensible"
