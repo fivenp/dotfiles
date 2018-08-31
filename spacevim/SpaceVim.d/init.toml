@@ -11,17 +11,17 @@
     # set spacevim theme. by default colorscheme layer is not loaded,
     # if you want to use more colorscheme, please load the colorscheme
     # layer
-    colorscheme = "gruvbox"
-    background = "dark"
-    colorscheme_bg = "dark"
+    colorscheme = "tender"
+    # background = "dark"
+    # colorscheme_bg = "dark"
     t_Co = 256
     # Disable guicolors in basic mode, many terminal do not support 24bit
     # true colors
     enable_guicolors = true
     # Disable statusline separator, if you want to use other value, please
     # install nerd fonts
-    statusline_separator = "arrow"
-    statusline_inactive_separator = "arrow"
+    statusline_separator = "slant"
+    statusline_inactive_separator = "bar"
     buffer_index_type = 4
     enable_tabline_filetype_icon = true
     enable_statusline_display_mode = true
@@ -30,6 +30,8 @@
     search_tools = ["pt", "ag", "rg", "ack", "grep"]
     disabled_plugins = ["vim-jsx","vim-sensible"]
     lint_on_the_fly = true
+    bootstrap_before = "config#before"
+    bootstrap_after = "config#after"
 
 # Enable autocomplete layer
 [[layers]]
@@ -62,10 +64,17 @@ default_height = 20
   name = "VersionControl"
 [[layers]]
   name = "checkers"
+[[layers]]
+  name = "core#statusline"
+  enable = false
 
 [[custom_plugins]]
   name = "ryanoasis/vim-devicons"
   name = "jelera/vim-javascript-syntax"
   name = "maxmellon/vim-jsx-pretty"
   name = "jreybert/vimagit"
+
+### themes
+  name = "jacoborus/tender"
+# name = "liuchengxu/space-vim-dark"
 #name = "tpope/vim-sensible"
